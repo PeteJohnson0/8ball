@@ -1,0 +1,16 @@
+.circle {
+    background: black;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+#randomizer {
+  background-color: blue;
+  color: white;
+}
+
+#answerList {
+  color: white;
+}
