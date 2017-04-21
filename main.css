@@ -1,12 +1,19 @@
 .circle {
-    background: black;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    align-items: center;
+  display: block;
+  background: black;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 0;
 }
 
-#randomizer {
+#questionInput{
+  margin-left: 40px;
+  margin-top: 130px;
+}
+
+#randomizer,
+#clearThisShit {
   background-color: blue;
   color: white;
 }

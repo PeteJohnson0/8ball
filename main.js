@@ -1,3 +1,8 @@
+var randomizer = document.getElementById('randomizer');
+var clearThisShit = document.getElementById('clearThisShit');
+randomizer.addEventListener("click", addAnswer);
+clearThisShit.addEventListener("click", clearList);
+
 var randomAnswers = [
  'It is certain',
  'It is decidedly so',
@@ -25,7 +30,7 @@ function randomA() {
   var genAnswer = randomAnswers[
     Math.floor(Math.random() * randomAnswers.length)
   ];
-  return genAnswer
+  return genAnswer;
 }
 
 function addAnswer() {
@@ -34,13 +39,16 @@ function addAnswer() {
   var questionBox = document.getElementById("questionInput");
   if ( questionBox.value === "" ) {
     alert("You need a question to generate an answer");
+  } else {
+    var li = document.createElement('li');
+    li.innerHTML = questionBox.value + ' : ' + ans;
+    answerBox.appendChild(li);
+    questionBox.value = ""
   }
-  else { addToList();
-}}
 
-function addToList() {
-var li = document.createElement('li');
-li.innerHTML = questionBox.value + ' : ' + ans;
-answerBox.appendChild(li);
-questionBox.value = ""
+}
+
+function clearList() {
+  var list = document.getElementById('answerList');
+  list.innerHTML = ""
 }
